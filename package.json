@@ -1,0 +1,10 @@
+{
+  "name": "mot-excuse-generator",
+  "version": "0.1.0",
+  "description": "A deliberately silly generator of excuses for failing an MOT. Workshop demo for the GitHub Copilot cloud agent.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "license": "MIT"
+}
