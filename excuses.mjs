@@ -18,3 +18,11 @@ export function pickExcuse(random = Math.random) {
   const index = Math.floor(random() * EXCUSES.length);
   return EXCUSES[index];
 }
+
+export function pickExcuseByCategory(category, random = Math.random) {
+  const excuses = EXCUSES.filter((e) => e.category === category);
+  if (excuses.length === 0) {
+    throw new Error(`Unknown category "${category}". Valid categories: ${listCategories().join(", ")}.`);
+  }
+  return excuses[Math.floor(random() * excuses.length)];
+}
